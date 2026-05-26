@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: dev-mbookmytrip-application-config
+  namespace: dev-mbookmytrip
+  labels:
+    env: dev-mbookmytrip
+    app: mbookmytrip
+    layer: frontend
+data:
+  application.properties: |
+    # Add your application properties here

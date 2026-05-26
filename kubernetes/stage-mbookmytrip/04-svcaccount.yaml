@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  labels:
+    env: stage-mbookmytrip
+    app: mbookmytrip
+    layer: frontend
+  name: stage-mbookmytrip-sa
+  namespace: stage-mbookmytrip

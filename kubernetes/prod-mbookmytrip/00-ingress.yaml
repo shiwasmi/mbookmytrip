@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: prod-mbookmytrip-ingress
+  namespace: prod-mbookmytrip
+  labels:
+    env: prod-mbookmytrip
+    app: mbookmytrip
+    layer: frontend
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+    - host: prod-mbookmytrip.cloudcortex.in
+      http:
+        paths:
+          - pathType: Prefix
+            path: "/"
+            backend:
+              service:
+                name: prod-mbookmytrip-service
+                port:
+                  number: 8080

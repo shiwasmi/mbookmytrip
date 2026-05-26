@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: stage-mbookmytrip-application-config
+  namespace: stage-mbookmytrip
+  labels:
+    env: stage-mbookmytrip
+    app: mbookmytrip
+    layer: frontend
+data:
+  application.properties: |
+    # Add your application properties here

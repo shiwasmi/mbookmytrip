@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    env: prod-mbookmytrip
+    app: mbookmytrip
+    layer: frontend
+  name: prod-mbookmytrip-service
+  namespace: prod-mbookmytrip
+spec:
+  type: NodePort
+  selector:
+    app: mbookmytrip
+  ports:
+    - name: api
+      port: 8888
+      targetPort: 8888

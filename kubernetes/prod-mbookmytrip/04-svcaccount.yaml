@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  labels:
+    env: prod-mbookmytrip
+    app: mbookmytrip
+    layer: frontend
+  name: prod-mbookmytrip-sa
+  namespace: prod-mbookmytrip
